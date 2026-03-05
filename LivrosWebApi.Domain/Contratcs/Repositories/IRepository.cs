@@ -7,6 +7,8 @@
         void Atualizar(T entity);
         Task<int> SaveChagesAsync();
 
+        void Delete(T entity);
+
         Task<T>ObterPorIdAsync(int  id);    
     }
 }

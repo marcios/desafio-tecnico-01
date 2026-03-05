@@ -1,18 +1,19 @@
 ﻿using LivrosWebApi.Core.Contratcs.Repositories;
 using LivrosWebApi.Core.Contratcs.UseCases;
 using LivrosWebApi.Core.Dtos;
+using LivrosWebApi.Core.Dtos.Generos;
 using LivrosWebApi.Core.Dtos.Requests.Generos;
 using LivrosWebApi.Core.Entities;
 
 namespace LivrosWebApi.Application.UseCases.Generos
 {
-    public class AtualizarGeneroUseCase :CadastroGeneroUseCaseBase , IUseCase<CadastroGeneroRequest, ResultDto>
+    public class AtualizarGeneroUseCase : CadastroGeneroUseCaseBase, IUseCase<CadastroGeneroRequest, ResultDto>
     {
 
         private Genero genero;
 
-        public AtualizarGeneroUseCase(IGeneroRepository generoRepository):base(generoRepository)
-        {   
+        public AtualizarGeneroUseCase(IGeneroRepository generoRepository) : base(generoRepository)
+        {
         }
 
         protected override async Task ValidarDadosCadastro(CadastroGeneroRequest cadastroGenero)
@@ -20,19 +21,19 @@ namespace LivrosWebApi.Application.UseCases.Generos
             await base.ValidarDadosCadastro(cadastroGenero);
 
             if (result.Notificacoes.Any())
-                return ;
+                return;
 
             if (!cadastroGenero.Id.HasValue)
                 result.AddNotificacao("Id do gênero não informado");
 
             genero = await _generoRepository.ObterPorIdAsync(cadastroGenero.Id.Value);
 
-            if (genero == null)            
+            if (genero == null)
                 result.AddNotificacao($"Gênero não localizado com o Id ({cadastroGenero.Id})");
 
         }
 
-        public async  Task<ResultDto> ProcessarAsync(CadastroGeneroRequest cadastroRequest)
+        public async Task<ResultDto> ProcessarAsync(CadastroGeneroRequest cadastroRequest)
         {
             try
             {
@@ -42,12 +43,17 @@ namespace LivrosWebApi.Application.UseCases.Generos
                     return result;
 
 
-                genero.AtualizarNome(cadastroRequest.Nome);
+                genero.Nome = cadastroRequest.Nome;
+                genero.Ativo = cadastroRequest.Ativo;
+
                 _generoRepository.Atualizar(genero);
                 var registrosAfetados = await _generoRepository.SaveChagesAsync();
 
                 if (registrosAfetados > 0)
-                    result.AddData(genero);
+                {
+                    GeneroDto dto = genero;
+                    result.AddData(dto);
+                }
                 else
                     result.AddNotificacao("Não foi possível atualizar o cadastro do gênero");
 

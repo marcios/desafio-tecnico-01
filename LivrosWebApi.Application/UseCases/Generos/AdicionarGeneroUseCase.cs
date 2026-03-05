@@ -1,6 +1,7 @@
 ﻿using LivrosWebApi.Core.Contratcs.Repositories;
 using LivrosWebApi.Core.Contratcs.UseCases;
 using LivrosWebApi.Core.Dtos;
+using LivrosWebApi.Core.Dtos.Generos;
 using LivrosWebApi.Core.Dtos.Mappers;
 using LivrosWebApi.Core.Dtos.Requests.Generos;
 using LivrosWebApi.Core.Entities;
@@ -31,7 +32,10 @@ namespace LivrosWebApi.Application.UseCases.Generos
                 var registrosAfetados = await _generoRepository.SaveChagesAsync();
 
                 if (registrosAfetados > 0)
-                    result.AddData(genero);
+                {
+                    GeneroDto dto = genero;
+                    result.AddData(dto);
+                }
                 else
                     result.AddNotificacao("Não foi possível salvar o cadastro do gênero");
 

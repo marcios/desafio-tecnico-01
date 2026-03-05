@@ -29,7 +29,7 @@ namespace LivrosWebApi.Controllers.v1
         [HttpGet("{generoId}")]
         public async Task<IActionResult> ObterGenero([FromRoute]int generoId)
         {
-            var result = await _generoService.ObterTodosAsync();
+            var result = await _generoService.ObterGeneroPorId(generoId);
             return ResultResponse(result);
         }
 
@@ -46,6 +46,16 @@ namespace LivrosWebApi.Controllers.v1
             cadastroGenero.Id = generoId;
             var resultCadastro = await _generoService.AtualizarAsync(cadastroGenero);
             return ResultResponse(resultCadastro);
+        }
+
+
+        [HttpDelete("{generoId}")]
+        public async Task<IActionResult> DesativarGenero([FromRoute] int generoId)
+        {
+            
+            var resultCadastro = await _generoService.DeleteAsync(generoId);
+            return ResultResponse(resultCadastro);
+            
         }
 
     }

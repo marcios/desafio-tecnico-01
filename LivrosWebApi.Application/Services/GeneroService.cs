@@ -15,6 +15,7 @@ namespace LivrosWebApi.Application.Services
 
         private readonly AdicionarGeneroUseCase _adicionarGeneroUseCase;
         private readonly AtualizarGeneroUseCase _atualizarGeneroUseCase;
+        private readonly RemoverGeneroUseCase _removeGeneroUseCase;
 
         public GeneroService(IGeneroRepository repository, ILogger<GeneroService> logger)
         {
@@ -22,6 +23,7 @@ namespace LivrosWebApi.Application.Services
             _logger = logger;
             _adicionarGeneroUseCase = new AdicionarGeneroUseCase(repository);
             _atualizarGeneroUseCase = new AtualizarGeneroUseCase(repository);
+            _removeGeneroUseCase = new RemoverGeneroUseCase(repository);
         }
 
         public async Task<ResultDto> AdicionarAsync(CadastroGeneroRequest cadastroGenero)
@@ -29,7 +31,7 @@ namespace LivrosWebApi.Application.Services
             var result = await _adicionarGeneroUseCase.ProcessarAsync(cadastroGenero);
 
             if (result.Notificacoes.Any())
-                _logger.LogInformation("Erros encontrados no processo de criar novo gênero {messages}", result.Mensagem);
+                _logger.LogError("Erros encontrados no processo de criar novo gênero {messages}", result.Mensagem);
 
             return result;
         }
@@ -39,9 +41,42 @@ namespace LivrosWebApi.Application.Services
             var result = await _atualizarGeneroUseCase.ProcessarAsync(cadastroGenero);
 
             if (result.Notificacoes.Any())
-                _logger.LogInformation("Erros encontrados no processo de atualizar o gênero {messages}", result.Mensagem);
+                _logger.LogError("Erros encontrados no processo de atualizar o gênero {messages}", result.Mensagem);
 
             return result;
+        }
+
+        public async Task<ResultDto> DeleteAsync(int generoId)
+        {
+            var result = await _removeGeneroUseCase.ProcessarAsync(generoId);
+
+            if (result.Notificacoes.Any())
+            {
+                _logger.LogError("Erros encontrados no processo de remover gênero {messages}", result.Mensagem);
+            }
+
+
+            return result;
+        }
+
+        public async Task<ResultDto> ObterGeneroPorId(int id)
+        {
+            var result = new ResultDto();
+
+            var genero = await _repository.ObterPorIdAsync(id);
+
+            if(genero == null)
+            {
+                result.AddNotificacao($"Gênero não localizado com Id: {id}");
+                return result;
+            }
+
+            GeneroDto dto = genero;
+            result.AddData(dto);
+
+
+            return result;
+
         }
 
         public async Task<ResultDto> ObterTodosAsync()

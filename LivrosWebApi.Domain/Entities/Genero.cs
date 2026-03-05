@@ -5,12 +5,14 @@
         private Genero() { }
         public Genero(string nome)
         {
-            Nome = nome;    
+            Nome = nome;
         }
 
         public int Id { get; private set; }
-        public string Nome { get; private set; }
+        public string Nome { get; set; }
 
-        public void AtualizarNome(string nome) => Nome = nome;
+        public bool Ativo { get; set; } = true;
+
+       
     }
 }

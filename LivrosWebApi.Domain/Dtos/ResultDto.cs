@@ -8,6 +8,7 @@ namespace LivrosWebApi.Core.Dtos
         public void AddData(dynamic data)
         {
             Data = data;
+            
         }
 
         public ResultDto()

@@ -2,6 +2,7 @@
 using LivrosWebApi.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LivrosWebApi.Data.Migrations
 {
     [DbContext(typeof(LivrosDbContext))]
-    partial class LivrosDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260305175713_AlterGenero_Add_Coluna_Ativo")]
+    partial class AlterGenero_Add_Coluna_Ativo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

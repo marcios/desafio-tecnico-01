@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LivrosWebApi.Controllers
 {
-    
+
     [ApiController]
     public class ApiBaseController : ControllerBase
     {
@@ -15,8 +15,20 @@ namespace LivrosWebApi.Controllers
                 "GET" => ResponseGet(resultDto),
                 "POST" => ResponsePost(resultDto),
                 "PUT" => ResponsePut(resultDto),
+                "DELETE" => ResponseDelete(resultDto),
                 _ => NotFound()
             };
+        }
+
+
+        private IActionResult ResponseDelete(ResultDto dto)
+        {
+            if (dto.Notificacoes != null && dto.Notificacoes.Any())
+                return BadRequest(dto.Notificacoes);
+
+
+            return new ObjectResult(dto.Data) { StatusCode = StatusCodes.Status202Accepted };
+
         }
 
         private IActionResult ResponsePut(ResultDto dto)
@@ -32,7 +44,7 @@ namespace LivrosWebApi.Controllers
 
         private IActionResult ResponsePost(ResultDto dto)
         {
-            if(dto.Notificacoes.Any())
+            if (dto.Notificacoes.Any())
                 return BadRequest(dto.Notificacoes);
 
 
@@ -42,8 +54,8 @@ namespace LivrosWebApi.Controllers
 
         private IActionResult ResponseGet(ResultDto dto)
         {
-            if(dto.Data == null || dto.Notificacoes.Any())
-                return NotFound(dto);  
+            if (dto.Data == null || dto.Notificacoes != null && dto.Notificacoes.Any())
+                return NotFound(dto);
 
             return Ok(dto);
 

@@ -203,7 +203,7 @@ namespace LivrosWebApi.Tests.UseCases.Generos
             Assert.Multiple(() =>
             {
 
-                Assert.That(result.Notificacoes.Any(), Is.False);
+                Assert.That(result.Notificacoes, Is.Null);
                 Assert.That(result.Data, Is.Not.Null);
             });
         }

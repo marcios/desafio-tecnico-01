@@ -24,6 +24,11 @@ namespace LivrosWebApi.Data.Repositories
           
         }
 
+        public void Delete(T entity)
+        {
+            _context.Set<T>().Remove(entity);
+        }
+
         public async Task<T> ObterPorIdAsync(int id)
         {
             return await _context.Set<T>().FindAsync(id);

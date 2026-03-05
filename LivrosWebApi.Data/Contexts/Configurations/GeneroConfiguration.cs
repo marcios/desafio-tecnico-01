@@ -11,6 +11,9 @@ namespace LivrosWebApi.Data.Contexts.Configurations
             builder.ToTable("Genero");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Nome).HasMaxLength(100).HasColumnType("varchar(100)").IsRequired();
+            builder.Property(x => x.Ativo)
+                .IsRequired()
+                .HasColumnType("bit(1)");
         }
     }
 }
