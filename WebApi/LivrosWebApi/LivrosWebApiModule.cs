@@ -6,8 +6,16 @@ namespace LivrosWebApi
 {
     public static class LivrosWebApiModule
     {
-        public static IServiceCollection AddWebApiDepencies(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddWebApiDependencies(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("cors", builder =>
+                 builder.AllowAnyHeader()
+                 .AllowAnyMethod()
+                 .AllowAnyOrigin());
+            });
+
             services.AddApiVersioning(options =>
             {
                 options.AssumeDefaultVersionWhenUnspecified = true;
@@ -23,7 +31,7 @@ namespace LivrosWebApi
         {
             options.Conventions.Add(new VersionByNamespaceConvention());
         })
-        
+
         .AddApiExplorer(options =>
         {
             options.GroupNameFormat = "'v'V";
@@ -32,8 +40,8 @@ namespace LivrosWebApi
 
 
 
-        services.AddCrossCuttingModule(configuration);
-        return services;
+            services.AddCrossCuttingModule(configuration);
+            return services;
         }
     }
 }

@@ -7,7 +7,7 @@ namespace LivrosWebApi
             var builder = WebApplication.CreateBuilder(args);
 
             //Configuracoes da api
-            builder.Services.AddWebApiDepencies(builder.Configuration);
+            builder.Services.AddWebApiDependencies(builder.Configuration);
 
             // Add services to the container.
 
@@ -22,6 +22,7 @@ namespace LivrosWebApi
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
+            app.UseCors("cors");
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -29,6 +30,8 @@ namespace LivrosWebApi
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            
 
             app.UseHttpsRedirection();
 

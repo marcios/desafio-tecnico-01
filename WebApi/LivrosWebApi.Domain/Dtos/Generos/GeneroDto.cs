@@ -14,11 +14,15 @@ namespace LivrosWebApi.Core.Dtos.Generos
             Id = genero.Id;
             Nome =genero.Nome;
             Ativo = genero.Ativo;
+
+            
         }
 
         public int Id { get; set; }
         public string Nome { get; set; }
         public bool Ativo { get;  set; }
+
+        public int? TotalLivros { get; set; } = 0;
 
         public static implicit operator GeneroDto(Genero genero)
         {
