@@ -1,5 +1,6 @@
 ﻿using Asp.Versioning;
 using LivrosWebApi.Core.Contratcs.Services;
+using LivrosWebApi.Core.Dtos.Requests.Generos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LivrosWebApi.Controllers.v1
@@ -8,7 +9,7 @@ namespace LivrosWebApi.Controllers.v1
    // [Route("api/[controller]")]
     [ApiController]
     [ApiVersion("1.0")]
-    public class GenerosController : ControllerBase
+    public class GenerosController : ApiBaseController
     {
 
         private readonly IGeneroService _generoService;
@@ -21,8 +22,15 @@ namespace LivrosWebApi.Controllers.v1
         [HttpGet]
         public async Task<IActionResult> ObterGeneros()
         {
-            var generos = await _generoService.ObterTodosAsync();
-            return Ok(generos);
+            var result = await _generoService.ObterTodosAsync();
+            return ResultResponse(result);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AdicionarGenero([FromBody] CadastroGeneroRequest cadastroGenero)
+        {
+            var resultCadastro = await _generoService.AdicionarAsync(cadastroGenero);
+            return ResultResponse(resultCadastro);
         }
 
     }

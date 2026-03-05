@@ -23,6 +23,7 @@ namespace LivrosWebApi
         {
             options.Conventions.Add(new VersionByNamespaceConvention());
         })
+        
         .AddApiExplorer(options =>
         {
             options.GroupNameFormat = "'v'V";
@@ -31,8 +32,8 @@ namespace LivrosWebApi
 
 
 
-            services.AddCrossCuttingModule(configuration);
-            return services;
+        services.AddCrossCuttingModule(configuration);
+        return services;
         }
     }
 }

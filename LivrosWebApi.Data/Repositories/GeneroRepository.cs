@@ -5,18 +5,19 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LivrosWebApi.Data.Repositories
 {
-    public class GeneroRepository : IGeneroRepository
+    public class GeneroRepository : RepositoryBase<Genero>, IGeneroRepository
     {
         private readonly LivrosDbContext _context;
-        public GeneroRepository(LivrosDbContext context)
+        public GeneroRepository(LivrosDbContext context):base(context) 
         {
             _context = context;
         }
-        public async Task<IEnumerable<Genero>> ObterTodosAsync()
+
+        public async Task<bool> ExistePorNomeAsync(string nome)
         {
-            return await _context.Generos
-                .AsNoTracking()
-                .ToArrayAsync();
+            return await _context.Generos.AnyAsync(x=>x.Nome.ToLower().Equals(nome.ToLower()));  
         }
+
+     
     }
 }

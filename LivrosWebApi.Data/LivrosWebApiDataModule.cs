@@ -14,7 +14,11 @@ namespace LivrosWebApi.Data
             var connection = configuration.GetConnectionString("Default");
 
             services.AddDbContext<LivrosDbContext>(options =>
-                options.UseMySQL(connection!).LogTo(Console.WriteLine).EnableDetailedErrors()
+                options.UseMySQL(connection!, o=>
+                {
+                    o.MigrationsAssembly("LivrosWebApi.Data");
+                }).LogTo(Console.WriteLine).EnableDetailedErrors()
+                
              );
 
 

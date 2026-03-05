@@ -12,7 +12,4 @@
   <ItemGroup>
     <ProjectReference Include="..\LivrosWebApi.Domain\LivrosWebApi.Core.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
 </Project>

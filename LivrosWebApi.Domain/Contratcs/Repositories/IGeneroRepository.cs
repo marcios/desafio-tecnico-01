@@ -2,8 +2,8 @@
 
 namespace LivrosWebApi.Core.Contratcs.Repositories
 {
-    public interface IGeneroRepository
+    public interface IGeneroRepository : IRepository<Genero>
     {
-        Task<IEnumerable<Genero>> ObterTodosAsync();
+        Task<bool> ExistePorNomeAsync(string nome);
     }
 }
