@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import type { Genero } from "../models/Genero.Interface";
-import GeneroService from "../services/GeneroService";
+import type { Genero } from "../../models/Genero.Interface";
+import GeneroService from "../../services/GeneroService";
+import { Link } from "react-router-dom";
 
 export default function GenerosView() {
 
@@ -35,19 +36,19 @@ export default function GenerosView() {
                     </tr>
                 </thead>
                 <tbody>
-                    {generos.map(genero=> <tr key={genero.id}>
-                            <td>
-                                {genero.id}
-                            </td>
-                            <td>
-                                {genero.nome}
-                            </td>
-                             <td>
-                                {genero.totalLivros}
-                            </td>
-                            <td>
-                                <a>link</a>
-                            </td>
+                    {generos.map(genero => <tr key={genero.id}>
+                        <td>
+                            {genero.id}
+                        </td>
+                        <td>
+                            {genero.nome}
+                        </td>
+                        <td>
+                            {genero.totalLivros}
+                        </td>
+                        <td>
+                            <Link to={`cadastro/${genero.id}`} >Editar</Link>
+                        </td>
 
                     </tr>)}
                 </tbody>

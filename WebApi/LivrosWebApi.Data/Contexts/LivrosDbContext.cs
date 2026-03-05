@@ -7,6 +7,7 @@ namespace LivrosWebApi.Data.Contexts
     public class LivrosDbContext : DbContext
     {
         public DbSet<Genero> Generos { get; set; }
+        public DbSet<Autor> Autores { get; set; }
 
         public LivrosDbContext(DbContextOptions options) : base(options)
         {

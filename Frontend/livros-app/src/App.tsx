@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
-import './App.css'
-
 import GeneroService from './services/GeneroService.ts'
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Link, Outlet, Route, Routes } from 'react-router-dom'
 import Home from './views/HomeView.tsx'
 import LivrosView from './views/LivrosView.tsx'
-import GenerosView from './views/GenerosView.tsx'
+import GenerosView from './views/generos/GenerosView.tsx'
+import GeneroCadastroView from './views/generos/CadastroView.tsx'
+import LayoutView from './views/LayoutView.tsx'
+import GeneroLayuot from './views/generos/GenerosLayout.tsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,20 +25,21 @@ function App() {
 
 
     <BrowserRouter>
-      <nav>
-        
-        <Link to="/">Livros</Link>&nbsp; | &nbsp;
-        <Link to="/generos">Gêneros</Link>
-      </nav>
+
 
       <Routes>
         {/* Define routes with a path and an element (component) */}
-        <Route path="/" element={<LivrosView />} />
-        <Route path="/generos" element={<GenerosView />} />
+        <Route path="/" element={<LayoutView />} >
+          <Route path="generos" element={<GeneroLayuot />} >
+            <Route index element={<GenerosView />} />
+            <Route path='cadastro/:generoId' element={<GeneroCadastroView />} />
+          </Route>
 
-        {/* Fallback route for any path that doesn't match */}
-        <Route path="*" element={<Home />} />
+
+          {/* <Route path="*" element={<LayoutView />} /> */}
+        </Route>
       </Routes>
+      <Outlet />
     </BrowserRouter>
 
 

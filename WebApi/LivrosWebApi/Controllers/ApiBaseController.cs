@@ -27,7 +27,7 @@ namespace LivrosWebApi.Controllers
                 return BadRequest(dto.Notificacoes);
 
 
-            return new ObjectResult(dto.Data) { StatusCode = StatusCodes.Status202Accepted };
+            return new ObjectResult(dto) { StatusCode = StatusCodes.Status202Accepted };
 
         }
 
@@ -37,7 +37,7 @@ namespace LivrosWebApi.Controllers
                 return BadRequest(dto.Notificacoes);
 
 
-            return new ObjectResult(dto.Data) { StatusCode = StatusCodes.Status202Accepted };
+            return new ObjectResult(dto) { StatusCode = StatusCodes.Status202Accepted };
 
         }
 
@@ -48,7 +48,7 @@ namespace LivrosWebApi.Controllers
                 return BadRequest(dto.Notificacoes);
 
 
-            return new ObjectResult(dto.Data) { StatusCode = StatusCodes.Status201Created };
+            return new ObjectResult(dto) { StatusCode = StatusCodes.Status201Created };
 
         }
 
