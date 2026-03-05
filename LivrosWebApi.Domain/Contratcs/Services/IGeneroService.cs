@@ -7,6 +7,7 @@ namespace LivrosWebApi.Core.Contratcs.Services
     public interface IGeneroService
     {
         Task<ResultDto> AdicionarAsync(CadastroGeneroRequest cadastroGenero);
+        Task<ResultDto> AtualizarAsync(CadastroGeneroRequest cadastroGenero);
         Task<ResultDto> ObterTodosAsync();
     }
 }

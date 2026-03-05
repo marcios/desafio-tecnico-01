@@ -15,7 +15,19 @@ namespace LivrosWebApi.Data.Repositories
 
         public async Task AdicionarAsync(T entity)
         {
-           await _context.AddAsync(entity);  
+            await _context.AddAsync(entity);
+        }
+
+        public void Atualizar(T entity)
+        {
+            _context.Set<T>().Update(entity);
+          
+        }
+
+        public async Task<T> ObterPorIdAsync(int id)
+        {
+            return await _context.Set<T>().FindAsync(id);
+
         }
 
         public async Task<IEnumerable<T>> ObterTodosAsync()

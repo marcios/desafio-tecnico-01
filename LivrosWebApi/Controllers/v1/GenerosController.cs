@@ -26,10 +26,25 @@ namespace LivrosWebApi.Controllers.v1
             return ResultResponse(result);
         }
 
+        [HttpGet("{generoId}")]
+        public async Task<IActionResult> ObterGenero([FromRoute]int generoId)
+        {
+            var result = await _generoService.ObterTodosAsync();
+            return ResultResponse(result);
+        }
+
         [HttpPost]
         public async Task<IActionResult> AdicionarGenero([FromBody] CadastroGeneroRequest cadastroGenero)
         {
             var resultCadastro = await _generoService.AdicionarAsync(cadastroGenero);
+            return ResultResponse(resultCadastro);
+        }
+
+        [HttpPut("{generoId}")]
+        public async Task<IActionResult> AtualizarGenero([FromBody] CadastroGeneroRequest cadastroGenero, [FromRoute] int generoId)
+        {
+            cadastroGenero.Id = generoId;
+            var resultCadastro = await _generoService.AtualizarAsync(cadastroGenero);
             return ResultResponse(resultCadastro);
         }
 

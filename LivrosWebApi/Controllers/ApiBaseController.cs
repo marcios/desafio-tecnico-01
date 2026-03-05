@@ -14,9 +14,21 @@ namespace LivrosWebApi.Controllers
             {
                 "GET" => ResponseGet(resultDto),
                 "POST" => ResponsePost(resultDto),
+                "PUT" => ResponsePut(resultDto),
                 _ => NotFound()
             };
         }
+
+        private IActionResult ResponsePut(ResultDto dto)
+        {
+            if (dto.Notificacoes.Any())
+                return BadRequest(dto.Notificacoes);
+
+
+            return new ObjectResult(dto.Data) { StatusCode = StatusCodes.Status202Accepted };
+
+        }
+
 
         private IActionResult ResponsePost(ResultDto dto)
         {

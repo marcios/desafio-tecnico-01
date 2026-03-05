@@ -8,16 +8,25 @@ namespace LivrosWebApi.Data.Repositories
     public class GeneroRepository : RepositoryBase<Genero>, IGeneroRepository
     {
         private readonly LivrosDbContext _context;
-        public GeneroRepository(LivrosDbContext context):base(context) 
+        public GeneroRepository(LivrosDbContext context) : base(context)
         {
             _context = context;
         }
 
-        public async Task<bool> ExistePorNomeAsync(string nome)
+        public async Task<bool> ExistePorNomeAsync(string nome, int? idIgnore)
         {
-            return await _context.Generos.AnyAsync(x=>x.Nome.ToLower().Equals(nome.ToLower()));  
+            var query = _context.Generos
+                .Where(x => x.Nome.ToLower().Equals(nome.ToLower()));
+
+
+            if (idIgnore.HasValue && idIgnore.Value > 0)
+                query = query.Where(x => x.Id != idIgnore.Value);
+
+
+            return await query.AnyAsync();
+
         }
 
-     
+
     }
 }

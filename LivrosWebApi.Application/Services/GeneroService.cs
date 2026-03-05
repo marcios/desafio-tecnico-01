@@ -14,12 +14,14 @@ namespace LivrosWebApi.Application.Services
         private readonly ILogger<GeneroService> _logger;
 
         private readonly AdicionarGeneroUseCase _adicionarGeneroUseCase;
+        private readonly AtualizarGeneroUseCase _atualizarGeneroUseCase;
 
         public GeneroService(IGeneroRepository repository, ILogger<GeneroService> logger)
         {
             _repository = repository;
             _logger = logger;
             _adicionarGeneroUseCase = new AdicionarGeneroUseCase(repository);
+            _atualizarGeneroUseCase = new AtualizarGeneroUseCase(repository);
         }
 
         public async Task<ResultDto> AdicionarAsync(CadastroGeneroRequest cadastroGenero)
@@ -27,7 +29,17 @@ namespace LivrosWebApi.Application.Services
             var result = await _adicionarGeneroUseCase.ProcessarAsync(cadastroGenero);
 
             if (result.Notificacoes.Any())
-                _logger.LogInformation("Erros encontrados no processo de criar novo gêncero {messages}", result.Mensagem);
+                _logger.LogInformation("Erros encontrados no processo de criar novo gênero {messages}", result.Mensagem);
+
+            return result;
+        }
+
+        public async Task<ResultDto> AtualizarAsync(CadastroGeneroRequest cadastroGenero)
+        {
+            var result = await _atualizarGeneroUseCase.ProcessarAsync(cadastroGenero);
+
+            if (result.Notificacoes.Any())
+                _logger.LogInformation("Erros encontrados no processo de atualizar o gênero {messages}", result.Mensagem);
 
             return result;
         }
