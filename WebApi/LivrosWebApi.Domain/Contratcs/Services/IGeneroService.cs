@@ -1,0 +1,15 @@
+﻿using LivrosWebApi.Core.Dtos;
+using LivrosWebApi.Core.Dtos.Requests;
+
+namespace LivrosWebApi.Core.Contratcs.Services
+{
+    public interface IGeneroService
+    {
+        Task<ResultDto> AdicionarAsync(CadastroGeneroRequest cadastroGenero);
+        Task<ResultDto> AtualizarAsync(CadastroGeneroRequest cadastroGenero);
+        Task<ResultDto> DeleteAsync(int generoId);
+
+        Task<ResultDto> ObterPorIdAsync(int id);
+        Task<ResultDto> ObterTodosAsync();
+    }
+}

@@ -1,0 +1,64 @@
+﻿using LivrosWebApi.Core.Dtos;
+using Microsoft.AspNetCore.Mvc;
+
+namespace LivrosWebApi.Controllers
+{
+
+    [ApiController]
+    public class ApiBaseController : ControllerBase
+    {
+        protected IActionResult ResultResponse(ResultDto resultDto)
+        {
+            var method = HttpContext.Request.Method;
+            return method switch
+            {
+                "GET" => ResponseGet(resultDto),
+                "POST" => ResponsePost(resultDto),
+                "PUT" => ResponsePut(resultDto),
+                "DELETE" => ResponseDelete(resultDto),
+                _ => NotFound()
+            };
+        }
+
+
+        private IActionResult ResponseDelete(ResultDto dto)
+        {
+            if (dto.Notificacoes != null && dto.Notificacoes.Any())
+                return BadRequest(dto);
+
+
+            return new ObjectResult(dto) { StatusCode = StatusCodes.Status202Accepted };
+
+        }
+
+        private IActionResult ResponsePut(ResultDto dto)
+        {
+            if (dto.Notificacoes.Any())
+                return BadRequest(dto);
+
+
+            return new ObjectResult(dto) { StatusCode = StatusCodes.Status202Accepted };
+
+        }
+
+
+        private IActionResult ResponsePost(ResultDto dto)
+        {
+            if (dto.Notificacoes.Any())
+                return BadRequest(dto);
+
+
+            return new ObjectResult(dto) { StatusCode = StatusCodes.Status201Created };
+
+        }
+
+        private IActionResult ResponseGet(ResultDto dto)
+        {
+            if (dto.Data == null || dto.Notificacoes != null && dto.Notificacoes.Any())
+                return NotFound(dto);
+
+            return Ok(dto);
+
+        }
+    }
+}

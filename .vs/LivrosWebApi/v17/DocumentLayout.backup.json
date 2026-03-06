@@ -1,0 +1,585 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5BC29EA3-95E4-43B9-8BB5-2C3FC70A7512}|LivrosWebApi.Application\\LivrosWebApi.Application.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.application\\usecases\\generos\\atualizargenerousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BC29EA3-95E4-43B9-8BB5-2C3FC70A7512}|LivrosWebApi.Application\\LivrosWebApi.Application.csproj|solutionrelative:livroswebapi.application\\usecases\\generos\\atualizargenerousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BC29EA3-95E4-43B9-8BB5-2C3FC70A7512}|LivrosWebApi.Application\\LivrosWebApi.Application.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.application\\services\\generoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BC29EA3-95E4-43B9-8BB5-2C3FC70A7512}|LivrosWebApi.Application\\LivrosWebApi.Application.csproj|solutionrelative:livroswebapi.application\\services\\generoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52132718-AAC1-4790-8026-BD3C32C4C190}|LivrosWebApi\\LivrosWebApi.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi\\controllers\\v1\\generoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52132718-AAC1-4790-8026-BD3C32C4C190}|LivrosWebApi\\LivrosWebApi.csproj|solutionrelative:livroswebapi\\controllers\\v1\\generoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E5D2CD3-F251-4C9E-943C-89324BD66BE5}|LivrosWebApi.Domain\\LivrosWebApi.Core.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.domain\\dtos\\resultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E5D2CD3-F251-4C9E-943C-89324BD66BE5}|LivrosWebApi.Domain\\LivrosWebApi.Core.csproj|solutionrelative:livroswebapi.domain\\dtos\\resultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BC29EA3-95E4-43B9-8BB5-2C3FC70A7512}|LivrosWebApi.Application\\LivrosWebApi.Application.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.application\\usecases\\generos\\removergenerousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BC29EA3-95E4-43B9-8BB5-2C3FC70A7512}|LivrosWebApi.Application\\LivrosWebApi.Application.csproj|solutionrelative:livroswebapi.application\\usecases\\generos\\removergenerousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52132718-AAC1-4790-8026-BD3C32C4C190}|LivrosWebApi\\LivrosWebApi.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi\\controllers\\apibasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52132718-AAC1-4790-8026-BD3C32C4C190}|LivrosWebApi\\LivrosWebApi.csproj|solutionrelative:livroswebapi\\controllers\\apibasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C7E3D19-528E-4603-9011-BA3493552812}|Tests\\WebApiLivros.Tests\\LivrosWebApi.Tests.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\tests\\webapilivros.tests\\usecases\\generos\\atualizargenerousecasetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C7E3D19-528E-4603-9011-BA3493552812}|Tests\\WebApiLivros.Tests\\LivrosWebApi.Tests.csproj|solutionrelative:tests\\webapilivros.tests\\usecases\\generos\\atualizargenerousecasetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C7E3D19-528E-4603-9011-BA3493552812}|Tests\\WebApiLivros.Tests\\LivrosWebApi.Tests.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\tests\\webapilivros.tests\\usecases\\generos\\adicionargenerousecasetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C7E3D19-528E-4603-9011-BA3493552812}|Tests\\WebApiLivros.Tests\\LivrosWebApi.Tests.csproj|solutionrelative:tests\\webapilivros.tests\\usecases\\generos\\adicionargenerousecasetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BC29EA3-95E4-43B9-8BB5-2C3FC70A7512}|LivrosWebApi.Application\\LivrosWebApi.Application.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.application\\usecases\\generos\\adicionargenerousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BC29EA3-95E4-43B9-8BB5-2C3FC70A7512}|LivrosWebApi.Application\\LivrosWebApi.Application.csproj|solutionrelative:livroswebapi.application\\usecases\\generos\\adicionargenerousecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BC29EA3-95E4-43B9-8BB5-2C3FC70A7512}|LivrosWebApi.Application\\LivrosWebApi.Application.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.application\\usecases\\generos\\cadastrogenerousecasebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BC29EA3-95E4-43B9-8BB5-2C3FC70A7512}|LivrosWebApi.Application\\LivrosWebApi.Application.csproj|solutionrelative:livroswebapi.application\\usecases\\generos\\cadastrogenerousecasebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D82EC13D-36ED-451B-A246-9F718B9327C2}|LivrosWebApi.Data\\LivrosWebApi.Data.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.data\\repositories\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D82EC13D-36ED-451B-A246-9F718B9327C2}|LivrosWebApi.Data\\LivrosWebApi.Data.csproj|solutionrelative:livroswebapi.data\\repositories\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E5D2CD3-F251-4C9E-943C-89324BD66BE5}|LivrosWebApi.Domain\\LivrosWebApi.Core.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.domain\\contratcs\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E5D2CD3-F251-4C9E-943C-89324BD66BE5}|LivrosWebApi.Domain\\LivrosWebApi.Core.csproj|solutionrelative:livroswebapi.domain\\contratcs\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E5D2CD3-F251-4C9E-943C-89324BD66BE5}|LivrosWebApi.Domain\\LivrosWebApi.Core.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.domain\\contratcs\\repositories\\igenerorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E5D2CD3-F251-4C9E-943C-89324BD66BE5}|LivrosWebApi.Domain\\LivrosWebApi.Core.csproj|solutionrelative:livroswebapi.domain\\contratcs\\repositories\\igenerorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E5D2CD3-F251-4C9E-943C-89324BD66BE5}|LivrosWebApi.Domain\\LivrosWebApi.Core.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.domain\\contratcs\\services\\igeneroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E5D2CD3-F251-4C9E-943C-89324BD66BE5}|LivrosWebApi.Domain\\LivrosWebApi.Core.csproj|solutionrelative:livroswebapi.domain\\contratcs\\services\\igeneroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E5D2CD3-F251-4C9E-943C-89324BD66BE5}|LivrosWebApi.Domain\\LivrosWebApi.Core.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.domain\\contratcs\\usecases\\iusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E5D2CD3-F251-4C9E-943C-89324BD66BE5}|LivrosWebApi.Domain\\LivrosWebApi.Core.csproj|solutionrelative:livroswebapi.domain\\contratcs\\usecases\\iusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E5D2CD3-F251-4C9E-943C-89324BD66BE5}|LivrosWebApi.Domain\\LivrosWebApi.Core.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.domain\\entities\\genero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E5D2CD3-F251-4C9E-943C-89324BD66BE5}|LivrosWebApi.Domain\\LivrosWebApi.Core.csproj|solutionrelative:livroswebapi.domain\\entities\\genero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E5D2CD3-F251-4C9E-943C-89324BD66BE5}|LivrosWebApi.Domain\\LivrosWebApi.Core.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.domain\\dtos\\generos\\generodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E5D2CD3-F251-4C9E-943C-89324BD66BE5}|LivrosWebApi.Domain\\LivrosWebApi.Core.csproj|solutionrelative:livroswebapi.domain\\dtos\\generos\\generodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E5D2CD3-F251-4C9E-943C-89324BD66BE5}|LivrosWebApi.Domain\\LivrosWebApi.Core.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.domain\\dtos\\mappers\\generomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E5D2CD3-F251-4C9E-943C-89324BD66BE5}|LivrosWebApi.Domain\\LivrosWebApi.Core.csproj|solutionrelative:livroswebapi.domain\\dtos\\mappers\\generomapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D82EC13D-36ED-451B-A246-9F718B9327C2}|LivrosWebApi.Data\\LivrosWebApi.Data.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.data\\migrations\\20260305175713_altergenero_add_coluna_ativo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D82EC13D-36ED-451B-A246-9F718B9327C2}|LivrosWebApi.Data\\LivrosWebApi.Data.csproj|solutionrelative:livroswebapi.data\\migrations\\20260305175713_altergenero_add_coluna_ativo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D82EC13D-36ED-451B-A246-9F718B9327C2}|LivrosWebApi.Data\\LivrosWebApi.Data.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.data\\migrations\\livrosdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D82EC13D-36ED-451B-A246-9F718B9327C2}|LivrosWebApi.Data\\LivrosWebApi.Data.csproj|solutionrelative:livroswebapi.data\\migrations\\livrosdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D82EC13D-36ED-451B-A246-9F718B9327C2}|LivrosWebApi.Data\\LivrosWebApi.Data.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.data\\contexts\\configurations\\generoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D82EC13D-36ED-451B-A246-9F718B9327C2}|LivrosWebApi.Data\\LivrosWebApi.Data.csproj|solutionrelative:livroswebapi.data\\contexts\\configurations\\generoconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D82EC13D-36ED-451B-A246-9F718B9327C2}|LivrosWebApi.Data\\LivrosWebApi.Data.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.data\\repositories\\generorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D82EC13D-36ED-451B-A246-9F718B9327C2}|LivrosWebApi.Data\\LivrosWebApi.Data.csproj|solutionrelative:livroswebapi.data\\repositories\\generorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D82EC13D-36ED-451B-A246-9F718B9327C2}|LivrosWebApi.Data\\LivrosWebApi.Data.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.data\\livroswebapi.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{D82EC13D-36ED-451B-A246-9F718B9327C2}|LivrosWebApi.Data\\LivrosWebApi.Data.csproj|solutionrelative:livroswebapi.data\\livroswebapi.data.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52132718-AAC1-4790-8026-BD3C32C4C190}|LivrosWebApi\\LivrosWebApi.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi\\livroswebapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{52132718-AAC1-4790-8026-BD3C32C4C190}|LivrosWebApi\\LivrosWebApi.csproj|solutionrelative:livroswebapi\\livroswebapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C7E3D19-528E-4603-9011-BA3493552812}|Tests\\WebApiLivros.Tests\\LivrosWebApi.Tests.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\tests\\webapilivros.tests\\livroswebapi.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8C7E3D19-528E-4603-9011-BA3493552812}|Tests\\WebApiLivros.Tests\\LivrosWebApi.Tests.csproj|solutionrelative:tests\\webapilivros.tests\\livroswebapi.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52132718-AAC1-4790-8026-BD3C32C4C190}|LivrosWebApi\\LivrosWebApi.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52132718-AAC1-4790-8026-BD3C32C4C190}|LivrosWebApi\\LivrosWebApi.csproj|solutionrelative:livroswebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52132718-AAC1-4790-8026-BD3C32C4C190}|LivrosWebApi\\LivrosWebApi.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi\\livroswebapimodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52132718-AAC1-4790-8026-BD3C32C4C190}|LivrosWebApi\\LivrosWebApi.csproj|solutionrelative:livroswebapi\\livroswebapimodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52132718-AAC1-4790-8026-BD3C32C4C190}|LivrosWebApi\\LivrosWebApi.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{52132718-AAC1-4790-8026-BD3C32C4C190}|LivrosWebApi\\LivrosWebApi.csproj|solutionrelative:livroswebapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D82EC13D-36ED-451B-A246-9F718B9327C2}|LivrosWebApi.Data\\LivrosWebApi.Data.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.data\\migrations\\20260305132124_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D82EC13D-36ED-451B-A246-9F718B9327C2}|LivrosWebApi.Data\\LivrosWebApi.Data.csproj|solutionrelative:livroswebapi.data\\migrations\\20260305132124_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52132718-AAC1-4790-8026-BD3C32C4C190}|LivrosWebApi\\LivrosWebApi.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi\\.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{52132718-AAC1-4790-8026-BD3C32C4C190}|LivrosWebApi\\LivrosWebApi.csproj|solutionrelative:livroswebapi\\.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D82EC13D-36ED-451B-A246-9F718B9327C2}|LivrosWebApi.Data\\LivrosWebApi.Data.csproj|d:\\dev\\desafios\\desafio-tecnico-01\\webapi\\livroswebapi.data\\livroswebapidatamodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D82EC13D-36ED-451B-A246-9F718B9327C2}|LivrosWebApi.Data\\LivrosWebApi.Data.csproj|solutionrelative:livroswebapi.data\\livroswebapidatamodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ResultDto.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Domain\\Dtos\\ResultDto.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Domain\\Dtos\\ResultDto.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Domain\\Dtos\\ResultDto.cs",
+              "RelativeToolTip": "LivrosWebApi.Domain\\Dtos\\ResultDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T18:42:24.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GeneroService.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Application\\Services\\GeneroService.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Application\\Services\\GeneroService.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Application\\Services\\GeneroService.cs",
+              "RelativeToolTip": "LivrosWebApi.Application\\Services\\GeneroService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA4wCgAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T13:40:04.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AtualizarGeneroUseCase.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Application\\UseCases\\Generos\\AtualizarGeneroUseCase.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Application\\UseCases\\Generos\\AtualizarGeneroUseCase.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Application\\UseCases\\Generos\\AtualizarGeneroUseCase.cs",
+              "RelativeToolTip": "LivrosWebApi.Application\\UseCases\\Generos\\AtualizarGeneroUseCase.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAmwCMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T16:16:58.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AtualizarGeneroUseCaseTests.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\Tests\\WebApiLivros.Tests\\UseCases\\Generos\\AtualizarGeneroUseCaseTests.cs",
+              "RelativeDocumentMoniker": "Tests\\WebApiLivros.Tests\\UseCases\\Generos\\AtualizarGeneroUseCaseTests.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\Tests\\WebApiLivros.Tests\\UseCases\\Generos\\AtualizarGeneroUseCaseTests.cs",
+              "RelativeToolTip": "Tests\\WebApiLivros.Tests\\UseCases\\Generos\\AtualizarGeneroUseCaseTests.cs",
+              "ViewState": "AgIAALEAAAAAAAAAAAAMwMcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T17:19:55.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RemoverGeneroUseCase.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Application\\UseCases\\Generos\\RemoverGeneroUseCase.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Application\\UseCases\\Generos\\RemoverGeneroUseCase.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Application\\UseCases\\Generos\\RemoverGeneroUseCase.cs",
+              "RelativeToolTip": "LivrosWebApi.Application\\UseCases\\Generos\\RemoverGeneroUseCase.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAApwDUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T18:14:24.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GenerosController.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi\\Controllers\\v1\\GenerosController.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi\\Controllers\\v1\\GenerosController.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi\\Controllers\\v1\\GenerosController.cs",
+              "RelativeToolTip": "LivrosWebApi\\Controllers\\v1\\GenerosController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAlwC4AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T13:28:44.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApiBaseController.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi\\Controllers\\ApiBaseController.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi\\Controllers\\ApiBaseController.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi\\Controllers\\ApiBaseController.cs",
+              "RelativeToolTip": "LivrosWebApi\\Controllers\\ApiBaseController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA1wBkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T15:22:31.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdicionarGeneroUseCaseTests.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\Tests\\WebApiLivros.Tests\\UseCases\\Generos\\AdicionarGeneroUseCaseTests.cs",
+              "RelativeDocumentMoniker": "Tests\\WebApiLivros.Tests\\UseCases\\Generos\\AdicionarGeneroUseCaseTests.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\Tests\\WebApiLivros.Tests\\UseCases\\Generos\\AdicionarGeneroUseCaseTests.cs",
+              "RelativeToolTip": "Tests\\WebApiLivros.Tests\\UseCases\\Generos\\AdicionarGeneroUseCaseTests.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAqwKUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T15:41:30.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AdicionarGeneroUseCase.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Application\\UseCases\\Generos\\AdicionarGeneroUseCase.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Application\\UseCases\\Generos\\AdicionarGeneroUseCase.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Application\\UseCases\\Generos\\AdicionarGeneroUseCase.cs",
+              "RelativeToolTip": "LivrosWebApi.Application\\UseCases\\Generos\\AdicionarGeneroUseCase.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAACMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T14:49:55.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CadastroGeneroUseCaseBase.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Application\\UseCases\\Generos\\CadastroGeneroUseCaseBase.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Application\\UseCases\\Generos\\CadastroGeneroUseCaseBase.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Application\\UseCases\\Generos\\CadastroGeneroUseCaseBase.cs",
+              "RelativeToolTip": "LivrosWebApi.Application\\UseCases\\Generos\\CadastroGeneroUseCaseBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T18:21:10.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RepositoryBase.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Data\\Repositories\\RepositoryBase.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Data\\Repositories\\RepositoryBase.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Data\\Repositories\\RepositoryBase.cs",
+              "RelativeToolTip": "LivrosWebApi.Data\\Repositories\\RepositoryBase.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwBgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T14:08:52.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Domain\\Contratcs\\Repositories\\IRepository.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Domain\\Contratcs\\Repositories\\IRepository.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Domain\\Contratcs\\Repositories\\IRepository.cs",
+              "RelativeToolTip": "LivrosWebApi.Domain\\Contratcs\\Repositories\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T13:51:48.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IGeneroRepository.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Domain\\Contratcs\\Repositories\\IGeneroRepository.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Domain\\Contratcs\\Repositories\\IGeneroRepository.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Domain\\Contratcs\\Repositories\\IGeneroRepository.cs",
+              "RelativeToolTip": "LivrosWebApi.Domain\\Contratcs\\Repositories\\IGeneroRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T14:12:37.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IGeneroService.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Domain\\Contratcs\\Services\\IGeneroService.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Domain\\Contratcs\\Services\\IGeneroService.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Domain\\Contratcs\\Services\\IGeneroService.cs",
+              "RelativeToolTip": "LivrosWebApi.Domain\\Contratcs\\Services\\IGeneroService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T14:57:45.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IUseCase.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Domain\\Contratcs\\UseCases\\IUseCase.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Domain\\Contratcs\\UseCases\\IUseCase.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Domain\\Contratcs\\UseCases\\IUseCase.cs",
+              "RelativeToolTip": "LivrosWebApi.Domain\\Contratcs\\UseCases\\IUseCase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T13:41:17.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "LivrosDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Data\\Migrations\\LivrosDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Data\\Migrations\\LivrosDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Data\\Migrations\\LivrosDbContextModelSnapshot.cs",
+              "RelativeToolTip": "LivrosWebApi.Data\\Migrations\\LivrosDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T17:57:21.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Genero.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Domain\\Entities\\Genero.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Domain\\Entities\\Genero.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Domain\\Entities\\Genero.cs",
+              "RelativeToolTip": "LivrosWebApi.Domain\\Entities\\Genero.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T18:12:37.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "20260305175713_AlterGenero_Add_Coluna_Ativo.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Data\\Migrations\\20260305175713_AlterGenero_Add_Coluna_Ativo.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Data\\Migrations\\20260305175713_AlterGenero_Add_Coluna_Ativo.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Data\\Migrations\\20260305175713_AlterGenero_Add_Coluna_Ativo.cs",
+              "RelativeToolTip": "LivrosWebApi.Data\\Migrations\\20260305175713_AlterGenero_Add_Coluna_Ativo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T17:57:23.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "GeneroConfiguration.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Data\\Contexts\\Configurations\\GeneroConfiguration.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Data\\Contexts\\Configurations\\GeneroConfiguration.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Data\\Contexts\\Configurations\\GeneroConfiguration.cs",
+              "RelativeToolTip": "LivrosWebApi.Data\\Contexts\\Configurations\\GeneroConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T17:55:02.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GeneroMapper.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Domain\\Dtos\\Mappers\\GeneroMapper.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Domain\\Dtos\\Mappers\\GeneroMapper.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Domain\\Dtos\\Mappers\\GeneroMapper.cs",
+              "RelativeToolTip": "LivrosWebApi.Domain\\Dtos\\Mappers\\GeneroMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T14:03:59.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "GeneroDto.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Domain\\Dtos\\Generos\\GeneroDto.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Domain\\Dtos\\Generos\\GeneroDto.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Domain\\Dtos\\Generos\\GeneroDto.cs",
+              "RelativeToolTip": "LivrosWebApi.Domain\\Dtos\\Generos\\GeneroDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T17:59:01.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "GeneroRepository.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Data\\Repositories\\GeneroRepository.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Data\\Repositories\\GeneroRepository.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Data\\Repositories\\GeneroRepository.cs",
+              "RelativeToolTip": "LivrosWebApi.Data\\Repositories\\GeneroRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBUAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T16:33:04.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LivrosWebApi.Data",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Data\\LivrosWebApi.Data.csproj",
+              "RelativeDocumentMoniker": "LivrosWebApi.Data\\LivrosWebApi.Data.csproj",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Data\\LivrosWebApi.Data.csproj",
+              "RelativeToolTip": "LivrosWebApi.Data\\LivrosWebApi.Data.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-05T16:55:33.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "LivrosWebApi",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi\\LivrosWebApi.csproj",
+              "RelativeDocumentMoniker": "LivrosWebApi\\LivrosWebApi.csproj",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi\\LivrosWebApi.csproj",
+              "RelativeToolTip": "LivrosWebApi\\LivrosWebApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-05T13:18:29.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "LivrosWebApi.Tests.csproj",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\Tests\\WebApiLivros.Tests\\LivrosWebApi.Tests.csproj",
+              "RelativeDocumentMoniker": "Tests\\WebApiLivros.Tests\\LivrosWebApi.Tests.csproj",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\Tests\\WebApiLivros.Tests\\LivrosWebApi.Tests.csproj",
+              "RelativeToolTip": "Tests\\WebApiLivros.Tests\\LivrosWebApi.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-05T15:35:43.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "LivrosWebApiModule.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi\\LivrosWebApiModule.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi\\LivrosWebApiModule.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi\\LivrosWebApiModule.cs",
+              "RelativeToolTip": "LivrosWebApi\\LivrosWebApiModule.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T14:43:56.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi\\Program.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi\\Program.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi\\Program.cs",
+              "RelativeToolTip": "LivrosWebApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T14:44:49.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": ".dockerignore",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi\\.dockerignore",
+              "RelativeDocumentMoniker": "LivrosWebApi\\.dockerignore",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi\\.dockerignore",
+              "RelativeToolTip": "LivrosWebApi\\.dockerignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-05T13:23:50.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "20260305132124_Init.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Data\\Migrations\\20260305132124_Init.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Data\\Migrations\\20260305132124_Init.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Data\\Migrations\\20260305132124_Init.cs",
+              "RelativeToolTip": "LivrosWebApi.Data\\Migrations\\20260305132124_Init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T13:21:34.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "LivrosWebApi\\appsettings.Development.json",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi\\appsettings.Development.json",
+              "RelativeToolTip": "LivrosWebApi\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-05T13:10:58.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "LivrosWebApiDataModule.cs",
+              "DocumentMoniker": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Data\\LivrosWebApiDataModule.cs",
+              "RelativeDocumentMoniker": "LivrosWebApi.Data\\LivrosWebApiDataModule.cs",
+              "ToolTip": "D:\\Dev\\desafios\\desafio-tecnico-01\\webapi\\LivrosWebApi.Data\\LivrosWebApiDataModule.cs",
+              "RelativeToolTip": "LivrosWebApi.Data\\LivrosWebApiDataModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T13:08:35.884Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1371,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
