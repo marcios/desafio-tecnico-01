@@ -17,16 +17,21 @@ os 2 projetos estão no mesmo repositorio
 
 API
 
-1 - Executar o combando para "buildar"
-dotnet build
+1 - Executar o combando para "buildar" acessar a pasta raiz do projeto e no local onde se encontra o arquivo 'LivrosWebApi.sln'
+executar o comando:
+
+```dotnet build```
 
 2 - Executar a migration
 
-dotnet ef database update --project .\LivrosWebApi.Data --startup-project .\LivrosWebApi
+
+```dotnet ef database update --project .\LivrosWebApi.Data --startup-project .\LivrosWebApi```
 
 
 3 - Rodar o projeto
- dotnet run --project .\LivrosWebApi\LivrosWebApi.csproj -lp https
+
+ ```dotnet run --project .\LivrosWebApi\LivrosWebApi.csproj -lp https```
+ 
  vai gerar o endereço:  https://localhost:7113
 
 4 - Caso queira acessar o swagger
