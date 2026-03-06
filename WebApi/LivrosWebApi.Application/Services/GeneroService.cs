@@ -3,7 +3,7 @@ using LivrosWebApi.Core.Contratcs.Repositories;
 using LivrosWebApi.Core.Contratcs.Services;
 using LivrosWebApi.Core.Dtos;
 using LivrosWebApi.Core.Dtos.Generos;
-using LivrosWebApi.Core.Dtos.Requests.Generos;
+using LivrosWebApi.Core.Dtos.Requests;
 using Microsoft.Extensions.Logging;
 
 namespace LivrosWebApi.Application.Services

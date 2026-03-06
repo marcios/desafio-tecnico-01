@@ -10,6 +10,9 @@ export default function LayoutView() {
             <li className="nav-item">
                 <Link to="/generos" className="nav-link">Gêneros</Link>
             </li>
+              <li className="nav-item">
+                <Link to="/autores" className="nav-link">Autores</Link>
+            </li>
           
         </ul>
         <nav>

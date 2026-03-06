@@ -9,41 +9,41 @@ using LivrosWebApi.Core.Entities;
 namespace LivrosWebApi.Application.UseCases.Generos
 {
 
-    public class AdicionarGeneroUseCase : CadastroGeneroUseCaseBase, IUseCase<CadastroGeneroRequest, ResultDto>
+    public class AdicionarAutoroUseCase : CadastroAutorUseCaseBase, IUseCase<CadastroAutorRequest, ResultDto>
     {
-        public AdicionarGeneroUseCase(IGeneroRepository generoRepository):base(generoRepository)
+        public AdicionarAutoroUseCase(IAutorRepository repository):base(repository)
         {
             
         }
 
-        public async Task<ResultDto> ProcessarAsync(CadastroGeneroRequest cadastroGenero)
+        public async Task<ResultDto> ProcessarAsync(CadastroAutorRequest cadastro)
         {
             try
             {
-                await ValidarDadosCadastro(cadastroGenero);
+                await ValidarDadosCadastro(cadastro);
 
                 if (result.Notificacoes.Any())
                     return result;
 
                 //salvar
-                Genero genero = cadastroGenero.ToEntity();
+                Autor autor = cadastro.ToEntity();
                
-                await _generoRepository.AdicionarAsync(genero);
-                var registrosAfetados = await _generoRepository.SaveChagesAsync();
+                await _repository.AdicionarAsync(autor);
+                var registrosAfetados = await _repository.SaveChagesAsync();
 
                 if (registrosAfetados > 0)
                 {
-                    GeneroDto dto = genero;
+                    AutorDto dto = autor;
                     result.AddData(dto);
                 }
                 else
-                    result.AddNotificacao("Não foi possível salvar o cadastro do gênero");
+                    result.AddNotificacao("Não foi possível salvar o cadastro do autor");
 
             }
             catch (Exception ex)
             {
                 result.Notificacoes.Clear();
-                result.AddNotificacao("Falha ao cadastrar novo gênero");
+                result.AddNotificacao("Falha ao cadastrar novo autor");
                 result.AddNotificacao(ex.Message);
             }
 

@@ -1,12 +1,11 @@
 ﻿using Asp.Versioning;
 using LivrosWebApi.Core.Contratcs.Services;
-using LivrosWebApi.Core.Dtos.Requests.Generos;
+using LivrosWebApi.Core.Dtos.Requests;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LivrosWebApi.Controllers.v1
 {
     [Route("api/v{version:apiVersion}/[controller]")]
-   // [Route("api/[controller]")]
     [ApiController]
     [ApiVersion("1.0")]
     public class GenerosController : ApiBaseController

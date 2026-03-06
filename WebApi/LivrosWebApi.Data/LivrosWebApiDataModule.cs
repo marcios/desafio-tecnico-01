@@ -23,6 +23,7 @@ namespace LivrosWebApi.Data
 
 
             services.AddScoped<IGeneroRepository, GeneroRepository>();
+            services.AddScoped<IAutorRepository, AutorRepository>();
 
             return services;
 

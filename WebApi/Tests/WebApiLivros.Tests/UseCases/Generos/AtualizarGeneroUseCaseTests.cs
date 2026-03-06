@@ -1,6 +1,6 @@
 ﻿using LivrosWebApi.Application.UseCases.Generos;
 using LivrosWebApi.Core.Contratcs.Repositories;
-using LivrosWebApi.Core.Dtos.Requests.Generos;
+using LivrosWebApi.Core.Dtos.Requests;
 using LivrosWebApi.Core.Entities;
 using NSubstitute;
 using NSubstitute.ExceptionExtensions;
@@ -203,7 +203,7 @@ namespace LivrosWebApi.Tests.UseCases.Generos
             Assert.Multiple(() =>
             {
 
-                Assert.That(result.Notificacoes, Is.Null);
+                Assert.That(result.Notificacoes, Is.Not.Null);
                 Assert.That(result.Data, Is.Not.Null);
             });
         }

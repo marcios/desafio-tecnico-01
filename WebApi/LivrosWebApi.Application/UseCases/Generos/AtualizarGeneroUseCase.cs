@@ -2,7 +2,7 @@
 using LivrosWebApi.Core.Contratcs.UseCases;
 using LivrosWebApi.Core.Dtos;
 using LivrosWebApi.Core.Dtos.Generos;
-using LivrosWebApi.Core.Dtos.Requests.Generos;
+using LivrosWebApi.Core.Dtos.Requests;
 using LivrosWebApi.Core.Entities;
 
 namespace LivrosWebApi.Application.UseCases.Generos

@@ -1,5 +1,5 @@
 ﻿using LivrosWebApi.Core.Dtos;
-using LivrosWebApi.Core.Dtos.Requests.Generos;
+using LivrosWebApi.Core.Dtos.Requests;
 
 namespace LivrosWebApi.Core.Contratcs.Services
 {

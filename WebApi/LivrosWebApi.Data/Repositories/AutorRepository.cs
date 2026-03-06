@@ -5,16 +5,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LivrosWebApi.Data.Repositories
 {
-    public class GeneroRepository : RepositoryBase<Genero>, IGeneroRepository
+    public class AutorRepository : RepositoryBase<Autor>, IAutorRepository
     {
-        public GeneroRepository(LivrosDbContext context) : base(context)
+
+        public AutorRepository(LivrosDbContext context):base(context) 
         {
+           
         }
 
-        public async Task<bool> ExistePorNomeAsync(string nome, int? idIgnore)
+        public async Task<bool> ExistePorNomeAsync(string nome, int? idIgnore = null)
         {
-            var query = _context.Generos
-                .Where(x => x.Nome.ToLower().Equals(nome.ToLower()));
+            var query = _context.Autores
+                 .Where(x => x.Nome.ToLower().Equals(nome.ToLower()));
 
 
             if (idIgnore.HasValue && idIgnore.Value > 0)
@@ -22,9 +24,6 @@ namespace LivrosWebApi.Data.Repositories
 
 
             return await query.AnyAsync();
-
         }
-
-
     }
 }

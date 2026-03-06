@@ -21,18 +21,18 @@ export default function GenerosView() {
     }, [])
 
 
-    function handleDeletar(genero:Genero) {
+    function handleDeletar(genero: Genero) {
         const msg = `Deseja realmente apagar o genero ${genero.nome}?`;
 
-        const remover = async ()=> {
+        const remover = async () => {
             const result = await GeneroService.remover(genero.id);
-            if(result.sucesso) {
+            if (result.sucesso) {
                 Notificacao.sucesso(result.mensagem, obterGeneros)
-            }else {
+            } else {
                 Notificacao.erro(result.erros);
             }
         }
-        Notificacao.confirmacao(msg,remover)
+        Notificacao.confirmacao(msg, remover)
     }
 
 
@@ -41,7 +41,7 @@ export default function GenerosView() {
 
         <div className="card">
             <div className="card-header">
-                <span>Lista de generos</span>
+                <span>Lista de Generos</span>
                 <Link to="cadastro/0" className="btn btn-sm btn-primary float-end ">Novo</Link>
             </div>
         </div>
@@ -53,7 +53,7 @@ export default function GenerosView() {
                             <th>ID</th>
                             <th>Nome</th>
                             <th>Total de livros</th>
-                            <th style={{width:"10rem"}}>#</th>
+                            <th style={{ width: "10rem" }}>#</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -68,7 +68,7 @@ export default function GenerosView() {
                                 {genero.totalLivros}
                             </td>
                             <td>
-                                <button className="btn btn-sm btn-danger mx-1" type="button" onClick={()=>handleDeletar(genero)}>Deletar</button>
+                                <button className="btn btn-sm btn-danger mx-1" type="button" onClick={() => handleDeletar(genero)}>Deletar</button>
                                 <Link className="btn btn-sm btn-warning" to={`cadastro/${genero.id}`} >Editar</Link>
                             </td>
 
@@ -76,7 +76,10 @@ export default function GenerosView() {
                     </tbody>
                 </table>
                 : <div>
-                    Sem resultado
+
+                    <span className="text-danger">
+                        Sem resultado
+                    </span>
                 </div>
             }
         </div>

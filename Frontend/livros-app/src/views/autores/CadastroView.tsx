@@ -1,26 +1,26 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import type { Genero } from '../../models/Genero.Interface';
-import GeneroService from '../../services/GeneroService';
+import AutorService from '../../services/AutorService';
 import Notificacao from '../../utils/Notificacao';
+import type { Autor } from '../../models/Autor.interface';
 
 
 export default function GeneroCadastroView() {
 
     const navigate = useNavigate();
-    const { generoId } = useParams();
-    const [genero, setGenero] = useState<Genero>();
+    const { autorId } = useParams();
+    const [autor, setAutor] = useState<Autor>();
 
     useEffect(() => {
-        if (generoId && generoId.length)
-            obterGenero();
+        if (autorId && autorId.length)
+            obterAutor();
     }, []);
 
 
-    const obterGenero = async () => {
-        const id = parseInt(generoId!);
+    const obterAutor = async () => {
+        const id = parseInt(autorId!);
         if (id <= 0) {
-            setGenero({
+            setAutor({
                 id,
                 nome: "",
                 ativo: true
@@ -28,26 +28,26 @@ export default function GeneroCadastroView() {
             return;
         }
 
-        const result = await GeneroService.obterPorId(id)
+        const result = await AutorService.obterPorId(id)
         if (result != null)
-            setGenero(result);
+            setAutor(result);
     }
 
-    const handleSaveGenero = async () => {
+    const handleSalvar = async () => {
         const erros = [];
-        if (!genero?.nome.replace(/\s/gm, '').length)
-            erros.push('Informe o nome do gênero');
+        if (!autor?.nome.replace(/\s/gm, '').length)
+            erros.push('Informe o nome do autor');
 
         if (erros.length) {
             Notificacao.erro(erros);
             return;
         }
 
-        const result = await GeneroService.Salvar(genero!);
+        const result = await AutorService.Salvar(autor!);
 
         if (result.sucesso) {
             Notificacao.sucesso(result.mensagem, () => {
-                navigate("/generos", { replace: true });
+                navigate("/autores", { replace: true });
             })
 
         }else {
@@ -57,45 +57,45 @@ export default function GeneroCadastroView() {
     }
 
     function handleChangeNome(nome: string) {
-        const prev = { ...genero } as Genero;
+        const prev = { ...autor } as Autor;
         prev.nome = nome;
-        setGenero(prev);
+        setAutor(prev);
     }
     function handleChangeStatus(ativo: boolean) {
-        const prev = { ...genero } as Genero;
+        const prev = { ...autor } as Autor;
         prev.ativo = ativo;
-        setGenero(prev);
+        setAutor(prev);
     }
 
     return <>
         <div className='card'>
             <div className="card-header">
-                Cadastro de gênero  {!genero?.id ? <span className="badge bg-success">Novo cadastro</span> : null}
+                Cadastro de autor  {!autor?.id ? <span className="badge bg-success">Novo cadastro</span> : null}
             </div>
             <div className='card-body'>
                 <form>
-                    <input type='hidden' value={generoId} />
+                    <input type='hidden' value={autorId} />
                     <div className="mb-3">
                         <label htmlFor="nome" className="form-label">Nome</label>
                         <input
                             type="text"
                             onChange={(e) => handleChangeNome(e.target.value)}
-                            value={genero?.nome}
+                            value={autor?.nome}
                             className="form-control" id="nome" aria-describedby="Nome do gênero" />
 
                     </div>
 
                     <div className="mb-3 form-check">
                         <input onChange={e => handleChangeStatus(e.target.checked)}
-                            checked={genero?.ativo}
+                            checked={autor?.ativo}
                             type="checkbox" className="form-check-input" id="exampleCheck1" />
                         <label className="form-check-label" htmlFor="exampleCheck1">
-                            {genero?.ativo ? <span className='text-success'>Ativo</span> : <span className='text-danger'>Inativo</span>}
+                            {autor?.ativo ? <span className='text-success'>Ativo</span> : <span className='text-danger'>Inativo</span>}
                         </label>
                     </div>
                     <Link className='btn btn-outline-info mr-1' to="/generos">Voltar</Link>
                     &nbsp;
-                    <button type="button" onClick={handleSaveGenero} className="btn btn-success">Salvar</button>
+                    <button type="button" onClick={handleSalvar} className="btn btn-success">Salvar</button>
                 </form>
             </div>
         </div>

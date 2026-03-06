@@ -6,7 +6,7 @@ namespace LivrosWebApi.Data.Repositories
 {
     public class RepositoryBase<T> : IRepository<T> where T : class
     {
-        private readonly LivrosDbContext _context;
+        protected readonly LivrosDbContext _context;
 
         public RepositoryBase(LivrosDbContext context)
         {

@@ -7,6 +7,9 @@ import GenerosView from './views/generos/GenerosView.tsx'
 import GeneroCadastroView from './views/generos/CadastroView.tsx'
 import LayoutView from './views/LayoutView.tsx'
 import GeneroLayuot from './views/generos/GenerosLayout.tsx'
+import AutoresLayout from './views/autores/AutoresLayout.tsx'
+import AutoresViews from './views/autores/AutoresView.tsx'
+import AutorCadastroView from './views/autores/CadastroView.tsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,6 +36,10 @@ function App() {
           <Route path="generos" element={<GeneroLayuot />} >
             <Route index element={<GenerosView />} />
             <Route path='cadastro/:generoId' element={<GeneroCadastroView />} />
+          </Route>
+          <Route path='autores' element={<AutoresLayout />} >
+            <Route index element={<AutoresViews />} />
+            <Route path='cadastro/:autorId' element={<AutorCadastroView />} />
           </Route>
 
 

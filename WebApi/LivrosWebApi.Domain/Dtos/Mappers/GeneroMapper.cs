@@ -1,4 +1,4 @@
-﻿using LivrosWebApi.Core.Dtos.Requests.Generos;
+﻿using LivrosWebApi.Core.Dtos.Requests;
 using LivrosWebApi.Core.Entities;
 
 namespace LivrosWebApi.Core.Dtos.Mappers
