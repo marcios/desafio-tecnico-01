@@ -15,6 +15,9 @@ namespace LivrosWebApi.Core.Dtos.Generos
             Nome = autor.Nome;
             Ativo = autor.Ativo;
 
+            if(autor.Livros!=null)
+                TotalLivros=autor.Livros.Count; 
+
 
         }
 

@@ -49,7 +49,7 @@ namespace LivrosWebApi.Controllers.v1
         }
 
         [HttpDelete("{autorId}")]
-        public async Task<IActionResult> DesativarAutor([FromRoute] int autorId)
+        public async Task<IActionResult> RemoverAutor([FromRoute] int autorId)
         {
 
             var resultCadastro = await _autorService.DeleteAsync(autorId);

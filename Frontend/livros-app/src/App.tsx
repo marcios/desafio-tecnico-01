@@ -1,8 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import GeneroService from './services/GeneroService.ts'
-import { BrowserRouter, Link, Outlet, Route, Routes } from 'react-router-dom'
-import Home from './views/HomeView.tsx'
-import LivrosView from './views/LivrosView.tsx'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import GenerosView from './views/generos/GenerosView.tsx'
 import GeneroCadastroView from './views/generos/CadastroView.tsx'
 import LayoutView from './views/LayoutView.tsx'
@@ -10,19 +8,12 @@ import GeneroLayuot from './views/generos/GenerosLayout.tsx'
 import AutoresLayout from './views/autores/AutoresLayout.tsx'
 import AutoresViews from './views/autores/AutoresView.tsx'
 import AutorCadastroView from './views/autores/CadastroView.tsx'
+import LivrosLayout from './views/livros/LivrosLayout.tsx'
+import LivroCadastroView from './views/livros/CadastroView.tsx'
+import LivrosViews from './views/livros/LivrosView.tsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  async function obterGeneros() {
-    let generos = await GeneroService.obtertTodos();
-    console.log('aaa==>', generos);
-  }
-
-  useEffect(() => {
-    obterGeneros();
-
-  }, []);
 
   return (
 
@@ -42,11 +33,15 @@ function App() {
             <Route path='cadastro/:autorId' element={<AutorCadastroView />} />
           </Route>
 
+          <Route path='livros' element={<LivrosLayout />} >
+            <Route index element={<LivrosViews />} />
+            <Route path='cadastro/:livroId' element={<LivroCadastroView />} />
+          </Route>
 
-          {/* <Route path="*" element={<LayoutView />} /> */}
+
         </Route>
       </Routes>
-      <Outlet />
+      
     </BrowserRouter>
 
 

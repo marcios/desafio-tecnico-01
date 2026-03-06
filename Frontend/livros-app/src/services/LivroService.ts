@@ -1,4 +1,5 @@
-import type { Autor } from "../models/Autor.interface";
+
+import type { Livro } from "../models/Livro.interface";
 import type { Result } from "../models/Result";
 import Api from "./Api"
 
@@ -8,23 +9,23 @@ const resultTemplate: Result = {
     sucesso: false
 }
 
-class AutorService {
+class LivroService {
 
 
-    endpoint: string = "autores";
+    endpoint: string = "livros";
     constructor() {
 
     }
-    async obterPorId(id: number): Promise<Autor | null> {
-        const genero = await Api.get<Autor>(`${this.endpoint}/${id}`);
+    async obterPorId(id: number): Promise<Livro | null> {
+        const genero = await Api.get<Livro>(`${this.endpoint}/${id}`);
 
         if (genero?.data != null)
             return genero?.data;
 
         return null;
     }
-    async obtertTodos(): Promise<Array<Autor>> {
-        const result = await Api.get<Array<Autor>>(this.endpoint)
+    async obtertTodos(): Promise<Array<Livro>> {
+        const result = await Api.get<Array<Livro>>(this.endpoint)
         if (result?.data)
             return result?.data;
 
@@ -33,7 +34,7 @@ class AutorService {
 
     async remover(id: number): Promise<Result> {
         let result = { ...resultTemplate }
-        const response = await Api.remove<Autor>(`${this.endpoint}/${id}`);
+        const response = await Api.remove<Livro>(`${this.endpoint}/${id}`);
         if (response) {
             result.sucesso = !response.notificacoes.length;
             result.mensagem = "Cadastro removido com sucesso";
@@ -43,11 +44,11 @@ class AutorService {
         return result;
     }
 
-    async Salvar(autor: Autor): Promise<Result> {
+    async Salvar(livro: Livro): Promise<Result> {
         let result = { ...resultTemplate }
-        if (autor.id > 0) {
+        if (livro.id > 0) {
 
-            const response = await Api.put<Autor>(`${this.endpoint}/${autor.id}`, autor);
+            const response = await Api.put<Livro>(`${this.endpoint}/${livro.id}`, livro);
             if (response) {
                 result.sucesso = !response.notificacoes.length;
                 result.mensagem = "Cadastro atualizado com sucesso";
@@ -55,8 +56,7 @@ class AutorService {
             }
 
         } else {
-            autor.ativo = true;
-            const response = await Api.post<Autor>(this.endpoint, autor);
+            const response = await Api.post<Livro>(this.endpoint, livro);
             if (response) {
                 result.sucesso = !response.notificacoes.length;
                 result.mensagem = "Cadastro criado com sucesso!";
@@ -74,4 +74,4 @@ class AutorService {
 
 
 
-export default new AutorService();
+export default new LivroService();

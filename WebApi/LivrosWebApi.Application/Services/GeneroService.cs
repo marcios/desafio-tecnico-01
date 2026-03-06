@@ -82,7 +82,7 @@ namespace LivrosWebApi.Application.Services
         public async Task<ResultDto> ObterTodosAsync()
         {
             var result = new ResultDto();
-            var generos = await _repository.ObterTodosAsync();
+            var generos = await _repository.ObterTodosAsync(genero=>genero.Livros);
             if (generos == null || !generos.Any()){
 
                 result.AddNotificacao("Nenhum registro localizado");

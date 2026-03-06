@@ -56,10 +56,13 @@ namespace LivrosWebApi.Application.UseCases.Generos
         private async Task ValidarExclusao(int generoId)
         {
             //verificar se existe
-            genero = await _generoRepository.ObterPorIdAsync(generoId);
+            genero = await _generoRepository.ObterPorIdAsync(generoId, genero=>genero.Livros);
 
             if (genero == null)
                 result.AddNotificacao($"Não existe um gênero com Id {generoId}");
+            else if(genero.Livros!=null && genero.Livros.Any())
+                result.AddNotificacao($"O Gênero: {genero.Nome} está vinculado a {genero.Livros.Count} livro(s), para remover o gênero é necessário remover o vinculo com o(s) livro(s)");
+
 
             //verificar se tem Livros vinculados
 

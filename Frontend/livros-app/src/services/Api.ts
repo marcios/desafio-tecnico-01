@@ -1,8 +1,8 @@
-import axios, { AxiosError } from 'axios';
+import axios from 'axios';
 import type { ApiResponseResult } from '../models/responses/ApiResponseResult';
 
 const instance = axios.create({
-    baseURL: 'https://localhost:7113/api/v1/',
+    baseURL: import.meta.env.VITE_API,
 });
 
 

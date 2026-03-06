@@ -79,7 +79,7 @@ namespace LivrosWebApi.Application.Services
         public async Task<ResultDto> ObterTodosAsync()
         {
             var result = new ResultDto();
-            var autores = await _repository.ObterTodosAsync();
+            var autores = await _repository.ObterTodosAsync(x=>x.Livros);
             if (autores == null || !autores.Any())
             {
 

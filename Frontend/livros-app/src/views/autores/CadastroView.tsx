@@ -5,7 +5,7 @@ import Notificacao from '../../utils/Notificacao';
 import type { Autor } from '../../models/Autor.interface';
 
 
-export default function GeneroCadastroView() {
+export default function AutorCadastroView() {
 
     const navigate = useNavigate();
     const { autorId } = useParams();
@@ -93,7 +93,7 @@ export default function GeneroCadastroView() {
                             {autor?.ativo ? <span className='text-success'>Ativo</span> : <span className='text-danger'>Inativo</span>}
                         </label>
                     </div>
-                    <Link className='btn btn-outline-info mr-1' to="/generos">Voltar</Link>
+                    <Link className='btn btn-outline-info mr-1' to="/autores">Voltar</Link>
                     &nbsp;
                     <button type="button" onClick={handleSalvar} className="btn btn-success">Salvar</button>
                 </form>

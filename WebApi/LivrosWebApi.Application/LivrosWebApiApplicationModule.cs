@@ -9,7 +9,8 @@ namespace LivrosWebApi.Application
         public static IServiceCollection AddApplicationModule(this IServiceCollection service, Microsoft.Extensions.Configuration.IConfiguration configuration)
         {
             service.AddScoped<IGeneroService, GeneroService>();
-            service.AddScoped<IAutorService, AutorService>();   
+            service.AddScoped<IAutorService, AutorService>();
+            service.AddScoped<ILivroService, LivroService>();
             return service;
         }
     }

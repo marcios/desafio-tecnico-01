@@ -49,7 +49,7 @@ namespace LivrosWebApi.Controllers.v1
 
 
         [HttpDelete("{generoId}")]
-        public async Task<IActionResult> DesativarGenero([FromRoute] int generoId)
+        public async Task<IActionResult> RemoverGenero([FromRoute] int generoId)
         {
             
             var resultCadastro = await _generoService.DeleteAsync(generoId);

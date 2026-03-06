@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace LivrosWebApi.Data.Contexts.Configurations
 {
-    public class GeneroConfiguration : IEntityTypeConfiguration<Genero>
+    public class GeneroConfiguration : IEntityTypeConfiguration<Livro>
     {
-        public void Configure(EntityTypeBuilder<Genero> builder)
+        public void Configure(EntityTypeBuilder<Livro> builder)
         {
             builder.ToTable("Genero");
             builder.HasKey(x => x.Id);

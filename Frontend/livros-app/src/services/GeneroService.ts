@@ -54,6 +54,7 @@ class GeneroService {
             }
 
         } else {
+            genero.ativo=true;
             const response = await Api.post<Genero>(this.endpoint, genero);
              if (response) {
                 result.sucesso = !response.notificacoes.length;

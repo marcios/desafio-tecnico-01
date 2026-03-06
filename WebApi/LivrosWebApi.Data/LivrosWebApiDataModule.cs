@@ -24,6 +24,7 @@ namespace LivrosWebApi.Data
 
             services.AddScoped<IGeneroRepository, GeneroRepository>();
             services.AddScoped<IAutorRepository, AutorRepository>();
+            services.AddScoped<ILivroRepository, LivroRepository>();
 
             return services;
 

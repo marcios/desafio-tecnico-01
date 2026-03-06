@@ -6,9 +6,10 @@ namespace LivrosWebApi.Core.Contratcs.Repositories
     {   
         Task<IEnumerable<T>> ObterTodosAsync(params Expression<Func<T, object>>[] includes);
         Task AdicionarAsync(T entity);
+        Task<bool> ExistePorId(int id);
         void Atualizar(T entity);
         Task<int> SaveChagesAsync();
         void Delete(T entity);
-        Task<T>ObterPorIdAsync(int  id);
+        Task<T>ObterPorIdAsync(int  id, params Expression<Func<T, object>>[] includes);
     }
 }

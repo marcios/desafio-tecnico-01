@@ -133,7 +133,7 @@ namespace LivrosWebApi.Tests.UseCases.Generos
             };
 
             _generoRespository.ObterPorIdAsync(Arg.Any<int>())
-                .Returns( new  Genero(cadastroRequest.Nome));
+                .Returns( new Genero(cadastroRequest.Nome));
 
             _generoRespository.ExistePorNomeAsync(Arg.Any<string>()).Returns(false);
 
