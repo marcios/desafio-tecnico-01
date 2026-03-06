@@ -55,6 +55,7 @@ export default function AutoresViews() {
                         <tr>
                             <th>ID</th>
                             <th>Nome</th>
+                            <th>Status</th>
                             <th>Total de livros</th>
                             <th style={{width:"10rem"}}>#</th>
                         </tr>
@@ -66,6 +67,12 @@ export default function AutoresViews() {
                             </td>
                             <td>
                                 {item.nome}
+                            </td>
+                             <td>
+                                {
+                                    item.ativo ? <span className="badge bg-success">Ativo</span> 
+                                : <span className="badge bg-danger">Inativo</span>
+                                }
                             </td>
                             <td>
                                 {item.totalLivros}

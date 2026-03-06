@@ -28,7 +28,7 @@ namespace LivrosWebApi.Controllers.v1
         [HttpGet("{generoId}")]
         public async Task<IActionResult> ObterGenero([FromRoute]int generoId)
         {
-            var result = await _generoService.ObterGeneroPorId(generoId);
+            var result = await _generoService.ObterPorIdAsync(generoId);
             return ResultResponse(result);
         }
 

@@ -1,6 +1,7 @@
 ﻿using LivrosWebApi.Core.Contratcs.Repositories;
 using LivrosWebApi.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace LivrosWebApi.Data.Repositories
 {
@@ -35,9 +36,16 @@ namespace LivrosWebApi.Data.Repositories
 
         }
 
-        public async Task<IEnumerable<T>> ObterTodosAsync()
+        public async Task<IEnumerable<T>> ObterTodosAsync(params Expression<Func<T, object>>[] includes)
         {
-            return await _context.Set<T>().AsNoTracking().ToListAsync();
+            var query = _context.Set<T>().AsNoTracking();
+
+            if (includes != null && includes.Any()) 
+            {
+                query = includes.Aggregate(query, (current, include) => current.Include(include));
+            }
+            
+            return await query.ToListAsync();
         }
 
         public async Task<int> SaveChagesAsync()

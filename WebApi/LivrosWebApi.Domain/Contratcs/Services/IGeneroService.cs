@@ -9,7 +9,7 @@ namespace LivrosWebApi.Core.Contratcs.Services
         Task<ResultDto> AtualizarAsync(CadastroGeneroRequest cadastroGenero);
         Task<ResultDto> DeleteAsync(int generoId);
 
-        Task<ResultDto> ObterGeneroPorId(int id);
+        Task<ResultDto> ObterPorIdAsync(int id);
         Task<ResultDto> ObterTodosAsync();
     }
 }

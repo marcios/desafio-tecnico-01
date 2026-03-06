@@ -52,24 +52,31 @@ export default function GenerosView() {
                         <tr>
                             <th>ID</th>
                             <th>Nome</th>
+                            <th>Status</th>
                             <th>Total de livros</th>
                             <th style={{ width: "10rem" }}>#</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {generos.map(genero => <tr key={genero.id}>
+                        {generos.map(item => <tr key={item.id}>
                             <td>
-                                {genero.id}
+                                {item.id}
                             </td>
                             <td>
-                                {genero.nome}
+                                {item.nome}
                             </td>
                             <td>
-                                {genero.totalLivros}
+                                {
+                                    item.ativo ? <span className="badge bg-success">Ativo</span> 
+                                : <span className="badge bg-danger">Inativo</span>
+                                }
                             </td>
                             <td>
-                                <button className="btn btn-sm btn-danger mx-1" type="button" onClick={() => handleDeletar(genero)}>Deletar</button>
-                                <Link className="btn btn-sm btn-warning" to={`cadastro/${genero.id}`} >Editar</Link>
+                                {item.totalLivros}
+                            </td>
+                            <td>
+                                <button className="btn btn-sm btn-danger mx-1" type="button" onClick={() => handleDeletar(item)}>Deletar</button>
+                                <Link className="btn btn-sm btn-warning" to={`cadastro/${item.id}`} >Editar</Link>
                             </td>
 
                         </tr>)}

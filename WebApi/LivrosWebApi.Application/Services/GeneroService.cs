@@ -59,7 +59,7 @@ namespace LivrosWebApi.Application.Services
             return result;
         }
 
-        public async Task<ResultDto> ObterGeneroPorId(int id)
+        public async Task<ResultDto> ObterPorIdAsync(int id)
         {
             var result = new ResultDto();
 

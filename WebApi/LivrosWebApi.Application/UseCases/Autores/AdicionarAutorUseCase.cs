@@ -6,12 +6,12 @@ using LivrosWebApi.Core.Dtos.Mappers;
 using LivrosWebApi.Core.Dtos.Requests;
 using LivrosWebApi.Core.Entities;
 
-namespace LivrosWebApi.Application.UseCases.Generos
+namespace LivrosWebApi.Application.UseCases.Autores
 {
 
-    public class AdicionarAutoroUseCase : CadastroAutorUseCaseBase, IUseCase<CadastroAutorRequest, ResultDto>
+    public class AdicionarAutorUseCase : CadastroAutorUseCaseBase, IUseCase<CadastroAutorRequest, ResultDto>
     {
-        public AdicionarAutoroUseCase(IAutorRepository repository):base(repository)
+        public AdicionarAutorUseCase(IAutorRepository repository):base(repository)
         {
             
         }

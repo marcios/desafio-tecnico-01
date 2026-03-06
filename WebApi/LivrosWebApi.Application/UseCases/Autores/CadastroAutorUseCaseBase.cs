@@ -2,7 +2,7 @@
 using LivrosWebApi.Core.Dtos;
 using LivrosWebApi.Core.Dtos.Requests;
 
-namespace LivrosWebApi.Application.UseCases.Generos
+namespace LivrosWebApi.Application.UseCases.Autores
 {
     public class CadastroAutorUseCaseBase
     {
