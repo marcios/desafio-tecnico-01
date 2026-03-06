@@ -24,7 +24,7 @@ namespace LivrosWebApi.Controllers
         private IActionResult ResponseDelete(ResultDto dto)
         {
             if (dto.Notificacoes != null && dto.Notificacoes.Any())
-                return BadRequest(dto.Notificacoes);
+                return BadRequest(dto);
 
 
             return new ObjectResult(dto) { StatusCode = StatusCodes.Status202Accepted };
@@ -34,7 +34,7 @@ namespace LivrosWebApi.Controllers
         private IActionResult ResponsePut(ResultDto dto)
         {
             if (dto.Notificacoes.Any())
-                return BadRequest(dto.Notificacoes);
+                return BadRequest(dto);
 
 
             return new ObjectResult(dto) { StatusCode = StatusCodes.Status202Accepted };
@@ -45,7 +45,7 @@ namespace LivrosWebApi.Controllers
         private IActionResult ResponsePost(ResultDto dto)
         {
             if (dto.Notificacoes.Any())
-                return BadRequest(dto.Notificacoes);
+                return BadRequest(dto);
 
 
             return new ObjectResult(dto) { StatusCode = StatusCodes.Status201Created };

@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import type { Genero } from '../../models/Genero.Interface';
 import GeneroService from '../../services/GeneroService';
+import Notificacao from '../../utils/Notificacao';
 
 
 export default function GeneroCadastroView() {
@@ -17,7 +18,17 @@ export default function GeneroCadastroView() {
 
 
     const obterGenero = async () => {
-        const result = await GeneroService.obterPorId(parseInt(generoId!))
+        const id = parseInt(generoId!);
+        if (id <= 0) {
+            setGenero({
+                id,
+                nome: "",
+                ativo: true
+            })
+            return;
+        }
+
+        const result = await GeneroService.obterPorId(id)
         if (result != null)
             setGenero(result);
     }
@@ -33,10 +44,14 @@ export default function GeneroCadastroView() {
         }
 
         const result = await GeneroService.Salvar(genero!);
-        console.log(result)
-        if (result != null) {
-            alert('Sucesso');
-             navigate("/generos", { replace: true });
+
+        if (result.sucesso) {
+            Notificacao.sucesso(result.mensagem, () => {
+                navigate("/generos", { replace: true });
+            })
+
+        }else {
+            Notificacao.erro(result.erros);
         }
 
     }
@@ -55,7 +70,7 @@ export default function GeneroCadastroView() {
     return <>
         <div className='card'>
             <div className="card-header">
-                Cadastro de gênero
+                Cadastro de gênero  {!genero?.id ? <span className="badge bg-success">Novo cadastro</span> : null}
             </div>
             <div className='card-body'>
                 <form>
@@ -78,6 +93,8 @@ export default function GeneroCadastroView() {
                             {genero?.ativo ? <span className='text-success'>Ativo</span> : <span className='text-danger'>Inativo</span>}
                         </label>
                     </div>
+                    <Link className='btn btn-outline-info mr-1' to="/generos">Voltar</Link>
+                    &nbsp;
                     <button type="button" onClick={handleSaveGenero} className="btn btn-success">Salvar</button>
                 </form>
             </div>

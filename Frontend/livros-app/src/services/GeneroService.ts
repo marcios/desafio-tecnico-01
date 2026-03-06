@@ -1,6 +1,12 @@
 import type { Genero } from "../models/Genero.Interface";
+import type { Result } from "../models/Result";
 import Api from "./Api"
 
+const resultTemplate: Result = {
+            erros: [],
+            mensagem: "",
+            sucesso: false
+        }
 class GeneroService {
 
 
@@ -24,18 +30,46 @@ class GeneroService {
         return [];
     }
 
-    async Salvar(genero: Genero): Promise<Genero | null> {
+    async remover(generoId:number) : Promise<Result> {
+        let result = {...resultTemplate}
+        const response = await Api.remove<Genero>(`${this.endpoint}/${generoId}`);
+            if (response) {
+                result.sucesso = !response.notificacoes.length;
+                result.mensagem ="Cadastro removido com sucesso";
+                result.erros = response.notificacoes;
+            }
 
+            return result;
+    }
+
+    async Salvar(genero: Genero): Promise<Result> {
+        let result = {...resultTemplate}
         if (genero.id > 0) {
-            
+
             const response = await Api.put<Genero>(`${this.endpoint}/${genero.id}`, genero);
-            if (response != null)
-                return response.data;
+            if (response) {
+                result.sucesso = !response.notificacoes.length;
+                result.mensagem ="Cadastro atualizado com sucesso";
+                result.erros = response.notificacoes;
+            }
+
+        } else {
+            const response = await Api.post<Genero>(this.endpoint, genero);
+             if (response) {
+                result.sucesso = !response.notificacoes.length;
+                result.mensagem ="Cadastro criado com sucesso!";
+                result.erros = response.notificacoes;
+            }
+
         }
 
-        return null;
+        return result;
 
     }
+
 }
+
+
+
 
 export default new GeneroService();
