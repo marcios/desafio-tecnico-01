@@ -3,11 +3,35 @@ import { Link } from "react-router-dom";
 import Notificacao from "../../utils/Notificacao";
 import type { Livro } from "../../models/Livro.interface";
 import LivroService from "../../services/LivroService";
+import type { Autor } from "../../models/Autor.interface";
+import AutorService from "../../services/AutorService";
+import GeneroService from "../../services/GeneroService";
 
 export default function LivrosViews() {
 
 
     const [livros, setLivros] = useState<Livro[]>([]);
+    const [autores, setAutores] = useState<Autor[]>([]);
+    const [generos, setGeneros] = useState<Autor[]>([]);
+
+    
+
+
+    async function  obterAutores(){
+        if(livros && !livros.length){
+            const result = await AutorService.obtertTodos();
+            if(result)
+                setAutores(result);
+        }
+    }
+
+     async function  obterGeneros(){
+        if(livros && !livros.length){
+            const result = await GeneroService.obtertTodos();
+            if(result)
+                setGeneros(result);
+        }
+    }
 
 
     async function obterLivros() {
@@ -21,6 +45,8 @@ export default function LivrosViews() {
 
     useEffect(() => {
         obterLivros();
+        obterAutores()
+        obterGeneros();
     }, [])
 
 
@@ -90,8 +116,12 @@ export default function LivrosViews() {
                         </tr>)}
                     </tbody>
                 </table>
-                : <div className="alert alert-danger">
-                    Sem resultado
+                : <div>
+
+                    <div className="alert alert-danger">Sem resultado</div>
+                    {!generos.length ? <div className="alert alert-danger">Cadastre um novo gênero</div> : null}
+                    {!autores.length ? <div className="alert alert-danger">Cadastre um novo autor</div> : null}
+                    
                 </div>
             }
         </div>
